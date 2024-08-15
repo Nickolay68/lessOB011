@@ -31,15 +31,17 @@ class Store:
             print(f"Товар '{item_name}' не найден в ассортименте.")
 
 # Создание объектов класса Store
-store1 = Store("Магазин №1", "ул. Пушкина, 10")
-store1.add_item("apples", 0.5)
-store1.add_item("bananas", 0.75)
+store1 = Store("Магазин №1", "ул. Ватутина, 30")
+store1.add_item("apples", 0.55)
+store1.add_item("bananas", 0.25)
+store1.add_item("coca", 0.4)
+store1.remove_item("apples")
 
 store2 = Store("Магазин №2", "ул. Лермонтова, 15")
 store2.add_item("oranges", 0.85)
 store2.add_item("grapes", 1.2)
 
-store3 = Store("Магазин №3", "ул. Чехова, 20")
+store3 = Store("Магазин №3", "ул. Пушкина, 20")
 store3.add_item("pears", 0.6)
 store3.add_item("mangoes", 1.5)
 
@@ -49,3 +51,4 @@ store1.update_price("apples", 0.55)
 print(store1.get_price("apples"))  # Выводит: 0.55
 store1.remove_item("bananas")
 print(store1.get_price("bananas"))  # Выводит: None
+
